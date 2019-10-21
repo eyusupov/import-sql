@@ -27,6 +27,7 @@ function main() {
     echo '\timing' > /root/.psqlrc
     exec_psql_file "language.sql"
     exec_psql_file "$VT_UTIL_DIR/postgis-vt-util.sql"
+    exec_psql_file "$VT_UTIL_DIR/TileBBox.sql"
     import_sql_files
 }
 
